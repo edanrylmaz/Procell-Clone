@@ -1,0 +1,161 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    /* mobile view start */
+    /* section left start */
+    .wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    div.icon-wrapper {
+        display: flex;
+        align-items: center;
+        color: white;
+        font-size: 22px;
+        margin-left: 3rem;
+        margin-bottom: 1.5rem;
+        max-width: 450px;
+    }
+    .section-left {
+        background-image: url("assets/images/purple-bg.jpg");
+        position: relative;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+    }
+    .icon-wrapper p {
+        padding-left: 0.5rem;
+    }
+    .mini-logo {
+        padding: 3rem 0  0 3rem;
+        margin-bottom: 3rem;
+    }
+    h1{
+        color: white;
+        font-size: 40px;
+        padding-bottom: 3rem;
+        padding-left: 3rem;
+    }
+    a.phone {
+        display: flex;
+        color: white;
+        border: 2px solid #5CD96C;
+        border-radius: 20px;
+        padding: 0.5rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem ;
+        margin-left: 3rem;
+        max-width: 240px; 
+        align-items: center;  
+        font-size: 20px;
+        transition: 0.3s;
+    }
+    a.phone img {
+        padding-right:.5rem ;
+        padding-left: .5rem;
+    }
+    a.phone:hover {
+        background-color: #5CD96C;
+    }
+    /* section left end */
+    /* section right start */
+    .section-right {
+        position: relative;
+        background-color: #5CD96C;
+        width: 100%;
+        height: auto;
+    }
+    
+    img.main-logo {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+    }
+    /* section right end */
+
+    /* desktop view start */
+    @media screen and (min-width:992px) {
+        .wrap {
+        flex-direction: row;
+    }
+    .section-left {
+        width: 70%;
+        height: 100vh;
+    }
+    img.girl-photo {
+        width: auto;
+        position: absolute;
+        transform: scale(1);
+        margin-top: 0;
+        margin-bottom: 0;
+        bottom: 1rem;
+        right: 1rem;
+    }
+    a.phone {
+        margin-top: 7rem;
+    }
+    /* section right start */
+    .section-right {
+        width: 30%;
+        height: 100vh;
+    }
+    img.main-logo {
+        position: static;
+        width: 100%;
+    }
+    /* section right end */
+    /* desktop view end */
+    }
+    
+    
+</style>
+<body>
+    <main class="wrap">
+        <section class="section-left">
+            <img class="mini-logo" src="assets/images/mini-logo.png" alt="procell mini logo">
+            <h1>Strom & Gas Profits aufgepasst</h1>
+            <div class="icon-wrapper">
+                <img src="assets/icons/icon1.svg" alt="icon1">
+                <p>Qc Ok 40 Euro</p>
+            </div>
+            <div class="icon-wrapper">
+                <img src="assets/icons/icon2.svg" alt="icon2">
+                <p>Verdienstmöglichkeiten im Monat bis zu 5000 Euro</p>
+            </div>
+            <div class="icon-wrapper">
+                <img src="assets/icons/icon3.svg" alt="icon3">
+                <p>Top Daten!</p>
+            </div>
+            <div class="icon-wrapper">
+                <img src="assets/icons/icon4.svg" alt="icon4">
+                <p>Wochenende Frei</p>
+            </div>
+            <img class="girl-photo" src="assets/images/girl.png" alt="procell girl photo">
+            <a class="phone" href="tel: +90 535 062 9553">
+                <img src="assets/icons/phone.svg" alt="phone icon">
+                0535 062 95553</a>
+        </section>
+        <section class="section-right">
+            <img class="main-logo" src="assets/images/main-logo.png" alt="procell big logo">
+            <div class="form-wrapper">
+                <h2>Hemen Başvur!</h2>
+                <form action=""></form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
