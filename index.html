@@ -13,88 +13,124 @@
     }
     /* mobile view start */
     /* section left start */
-    .wrap {
+    body {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: center;
-        flex-wrap: wrap;
     }
     div.icon-wrapper {
         display: flex;
         align-items: center;
         color: white;
-        font-size: 22px;
-        margin-left: 3rem;
-        margin-bottom: 1.5rem;
+        padding: 1rem 0;
         max-width: 450px;
     }
     .section-left {
         background-image: url("assets/images/purple-bg.jpg");
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         background-repeat: no-repeat;
         background-size: cover;
-        width: 100%;
+        padding: 3rem 1.5rem;
     }
     .icon-wrapper p {
-        padding-left: 0.5rem;
+        font-size: 22px;
+        padding-left: 1rem;
     }
     .mini-logo {
-        padding: 3rem 0  0 3rem;
-        margin-bottom: 3rem;
+        width: 140px;
+    }
+    img.girl-photo {
+        width: 100%;
+        padding: 1rem 0;
     }
     h1{
         color: white;
-        font-size: 40px;
-        padding-bottom: 3rem;
-        padding-left: 3rem;
+        font-size: 36px;
+        padding: 1.5rem 0;
     }
     a.phone {
         display: flex;
         color: white;
-        border: 2px solid #5CD96C;
+        border: 2.5px solid #0ade9f;
         border-radius: 20px;
-        padding: 0.5rem;
-        margin-top: 1rem;
-        margin-bottom: 2rem ;
-        margin-left: 3rem;
-        max-width: 240px; 
-        align-items: center;  
+        font-weight: 500;
+        padding: .5rem .75rem;
         font-size: 20px;
         transition: 0.3s;
     }
     a.phone img {
-        padding-right:.5rem ;
-        padding-left: .5rem;
+        padding: 0 .5rem;
     }
     a.phone:hover {
-        background-color: #5CD96C;
+        background-color: #0ade9f;
     }
     /* section left end */
     /* section right start */
     .section-right {
         position: relative;
-        background-color: #5CD96C;
-        width: 100%;
+        background-color: #0ade9f;
         height: auto;
     }
-    
     img.main-logo {
         width: 100%;
         height: auto;
         display: block;
         object-fit: cover;
     }
+    h2{
+        font-size: 22px;
+        color: white;
+        padding-top: .5rem;
+    }
+    .form-wrapper {
+        padding: 1rem 2.5rem;
+    }
+    .form-wrapper form {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem 0;
+    }
+    form input {
+        border-bottom: 2px solid #ffffff80;
+        margin: 1rem 0 .5rem 0;
+        padding-bottom: .5rem;
+        background-color: transparent;
+        color: white;
+    }
+    form input::placeholder {
+        color: white;
+        font-size: 14px;
+    }
+    .btn-link {
+        background-color: #173560;
+        color: white;
+        padding: 0.75rem;
+        border-radius: 10px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        margin-top: 1.5rem;
+    }
     /* section right end */
 
     /* desktop view start */
-    @media screen and (min-width:992px) {
-        .wrap {
+    @media screen and (min-width:1200px) {
+        body {
         flex-direction: row;
     }
+    /* section left start */
     .section-left {
         width: 70%;
         height: 100vh;
+        padding: 3rem;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    .icon-wrapper p {
+        font-size: 24px;
     }
     img.girl-photo {
         width: auto;
@@ -103,11 +139,12 @@
         margin-top: 0;
         margin-bottom: 0;
         bottom: 1rem;
-        right: 1rem;
+        right: 3rem;
     }
     a.phone {
-        margin-top: 7rem;
+        margin-top: 8rem;
     }
+    /* section left end */  
     /* section right start */
     .section-right {
         width: 30%;
@@ -117,6 +154,14 @@
         position: static;
         width: 100%;
     }
+    h2 {
+        font-weight: 600;
+    }
+    .form-wrapper form {
+       height: 500px;
+       overflow-y: scroll; 
+    }
+    
     /* section right end */
     /* desktop view end */
     }
@@ -124,38 +169,48 @@
     
 </style>
 <body>
-    <main class="wrap">
-        <section class="section-left">
-            <img class="mini-logo" src="assets/images/mini-logo.png" alt="procell mini logo">
-            <h1>Strom & Gas Profits aufgepasst</h1>
-            <div class="icon-wrapper">
-                <img src="assets/icons/icon1.svg" alt="icon1">
-                <p>Qc Ok 40 Euro</p>
-            </div>
-            <div class="icon-wrapper">
-                <img src="assets/icons/icon2.svg" alt="icon2">
-                <p>Verdienstmöglichkeiten im Monat bis zu 5000 Euro</p>
-            </div>
-            <div class="icon-wrapper">
-                <img src="assets/icons/icon3.svg" alt="icon3">
-                <p>Top Daten!</p>
-            </div>
-            <div class="icon-wrapper">
-                <img src="assets/icons/icon4.svg" alt="icon4">
-                <p>Wochenende Frei</p>
-            </div>
-            <img class="girl-photo" src="assets/images/girl.png" alt="procell girl photo">
-            <a class="phone" href="tel: +90 535 062 9553">
-                <img src="assets/icons/phone.svg" alt="phone icon">
-                0535 062 95553</a>
-        </section>
-        <section class="section-right">
-            <img class="main-logo" src="assets/images/main-logo.png" alt="procell big logo">
-            <div class="form-wrapper">
-                <h2>Hemen Başvur!</h2>
-                <form action=""></form>
-            </div>
-        </section>
-    </main>
+    <section class="section-left">
+        <img class="mini-logo" src="assets/images/mini-logo.png" alt="procell mini logo">
+        <h1>Strom & Gas Profits aufgepasst</h1>
+        <div class="icon-wrapper">
+            <img src="assets/icons/icon1.svg" alt="icon1">
+            <p>Qc Ok 40 Euro</p>
+        </div>
+        <div class="icon-wrapper">
+            <img src="assets/icons/icon2.svg" alt="icon2">
+            <p>Verdienstmöglichkeiten im Monat bis zu 5000 Euro</p>
+        </div>
+        <div class="icon-wrapper">
+            <img src="assets/icons/icon3.svg" alt="icon3">
+            <p>Top Daten!</p>
+        </div>
+        <div class="icon-wrapper">
+            <img src="assets/icons/icon4.svg" alt="icon4">
+            <p>Wochenende Frei</p>
+        </div>
+        <img class="girl-photo" src="assets/images/girl.png" alt="procell girl photo">
+        <a class="phone" href="tel: +90 535 062 95 53">
+            <img src="assets/icons/phone.svg" alt="phone icon">
+            +90 535 062 95 53</a>
+    </section>
+    <section class="section-right">
+        <img class="main-logo" src="assets/images/main-logo.png" alt="procell big logo">
+        <div class="form-wrapper">
+            <h2>Hemen Başvur!</h2>
+            <form class="deneme" action="">
+                <input type="text" name="" placeholder="Ad Soyad" required>
+                <input type="tel" name="" placeholder="Telefon Numarası" required>
+                <input type="number" name="" placeholder="Kaç Yıl Yurt Dışında Bulundunuz?" required>
+                <input type="text" name="" placeholder="Almancayı Nerede Öğrendiniz?" required>
+                <input type="text" name="" placeholder="Daha Önce Home Office çalıştınız Mı?" required>
+                <input type="text" name="" placeholder="Satış Yaptınız Mı? Hangi Projelerde?" required>
+                <input type="text" name="" placeholder="Evinizde Bilgisayar Var Mı?" required>
+                <input type="text" name="" placeholder="Sizi Hangi Saatlerde Arayabiliriz?" required>
+                <input type="text" name="" placeholder="Evden Çalışmaya Engel Durumunuz Var Mı?" required>
+                <a class="btn-link" href="#">BAŞVUR</a>
+            </form>
+        </div>
+        
+    </section>
 </body>
 </html>
