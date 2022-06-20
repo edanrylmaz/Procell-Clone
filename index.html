@@ -69,9 +69,13 @@
     /* section left end */
     /* section right start */
     .section-right {
+        display: flex;
+        flex-direction: column;
         position: relative;
         background-color: #0ade9f;
-        height: auto;
+        height: 100vh;
+        /*box-shadow: 0 0 0 100vmax #0ade9f;
+        clip-path: inset(0 -100vmax);*/
     }
     img.main-logo {
         width: 100%;
@@ -82,22 +86,23 @@
     h2{
         font-size: 22px;
         color: white;
-        padding-top: .5rem;
+        margin: 2rem 0 2.5rem 0;
+        padding-left: 2rem;
     }
-    .form-wrapper {
-        padding: 1rem 2.5rem;
-    }
-    .form-wrapper form {
+    form {
         display: flex;
         flex-direction: column;
-        padding: 1.5rem 0;
+        padding: 0 2rem;
+        overflow-y: auto;
+        height: 60vh;
     }
     form input {
         border-bottom: 2px solid #ffffff80;
-        margin: 1rem 0 .5rem 0;
+        margin: 1rem 0 1rem 0;
         padding-bottom: .5rem;
         background-color: transparent;
         color: white;
+        font-size: 14px;
     }
     form input::placeholder {
         color: white;
@@ -114,6 +119,53 @@
         margin-top: 1.5rem;
     }
     /* section right end */
+
+    /* middle view start */
+    @media screen and (min-width:992px) {
+        body {
+            flex-direction: row;
+        }
+        .section-left {
+            width: 65%;
+            height: 100vh;
+        }
+        .icon-wrapper p {
+            font-size: 20px;
+        }
+        img.girl-photo {
+        width: auto;
+        position: absolute;
+        transform: scale(.8);
+        margin-top: 0;
+        margin-bottom: 0;
+        bottom: 1rem;
+        right: 3rem;
+    }
+        .section-right {
+            width: 35%;
+        }
+    }
+    /* middle view end */
+
+    /* small devices start */
+    @media screen and (min-width:768px) {
+        h1 {
+            font-size: 38px;
+        }
+        .icon-wrapper p {
+            font-size: 28px;
+        }
+        img.girl-photo {
+            transform: scale(.8);
+        }
+        h2 {
+            font-size: 26px;
+        }
+        form input, form input::placeholder {
+            font-size: 20px;
+        }
+    }
+    /* small devices end */
 
     /* desktop view start */
     @media screen and (min-width:1200px) {
@@ -133,13 +185,7 @@
         font-size: 24px;
     }
     img.girl-photo {
-        width: auto;
-        position: absolute;
         transform: scale(1);
-        margin-top: 0;
-        margin-bottom: 0;
-        bottom: 1rem;
-        right: 3rem;
     }
     a.phone {
         margin-top: 8rem;
@@ -148,20 +194,24 @@
     /* section right start */
     .section-right {
         width: 30%;
-        height: 100vh;
     }
     img.main-logo {
         position: static;
         width: 100%;
     }
     h2 {
+        font-size: 24px;
         font-weight: 600;
     }
-    .form-wrapper form {
+    form {
        height: 500px;
-       overflow-y: scroll; 
+       overflow-y: auto;
+       margin: 0 2rem;
+       padding: 0 1rem;
     }
-    
+    form input,form input::placeholder {
+        font-size: 16px;
+    }
     /* section right end */
     /* desktop view end */
     }
@@ -195,12 +245,11 @@
     </section>
     <section class="section-right">
         <img class="main-logo" src="assets/images/main-logo.png" alt="procell big logo">
-        <div class="form-wrapper">
-            <h2>Hemen Başvur!</h2>
+        <h2>Hemen Başvur!</h2>
             <form class="deneme" action="">
                 <input type="text" name="" placeholder="Ad Soyad" required>
                 <input type="tel" name="" placeholder="Telefon Numarası" required>
-                <input type="number" name="" placeholder="Kaç Yıl Yurt Dışında Bulundunuz?" required>
+                <input type="number" min="0" name="" placeholder="Kaç Yıl Yurt Dışında Bulundunuz?" required>
                 <input type="text" name="" placeholder="Almancayı Nerede Öğrendiniz?" required>
                 <input type="text" name="" placeholder="Daha Önce Home Office çalıştınız Mı?" required>
                 <input type="text" name="" placeholder="Satış Yaptınız Mı? Hangi Projelerde?" required>
@@ -209,8 +258,6 @@
                 <input type="text" name="" placeholder="Evden Çalışmaya Engel Durumunuz Var Mı?" required>
                 <a class="btn-link" href="#">BAŞVUR</a>
             </form>
-        </div>
-        
     </section>
 </body>
 </html>
